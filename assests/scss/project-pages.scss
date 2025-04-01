@@ -1,0 +1,225 @@
+/* Project Pages SCSS - Save as project-pages.scss and compile to CSS */
+
+// Main Project Display Section
+.project-display {
+    padding: 3rem 0;
+    background-color: #f9f9f9;
+}
+
+.project-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+}
+
+// Left Pane - Slideshow
+.project-slideshow {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+    .slideshow-container {
+        position: relative;
+        width: 100%;
+
+        .slide {
+            display: none;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px 8px 0 0;
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 1rem;
+            margin-top: -2rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.2);
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+    }
+
+    .dots-container {
+        text-align: center;
+        padding: 1rem 0;
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+
+            &.active,
+            &:hover {
+                background-color: #717171;
+            }
+        }
+    }
+
+    // Animation
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+
+        to {
+            opacity: 1
+        }
+    }
+}
+
+// Right Pane - Project Details
+.project-details {
+    flex: 1.2;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .project-title {
+        font-size: 2.2rem;
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+
+    .project-meta {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 1rem;
+    }
+
+    .project-description {
+        h2 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .project-technologies {
+        h2 {
+            font-size: 1.5rem;
+            color: #444;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+
+            .tech-tag {
+                display: inline-block;
+                padding: 0.5rem 1.2rem;
+                background: linear-gradient(45deg, #3498db, #2980b9);
+                color: white;
+                font-size: 0.9rem;
+                border-radius: 2rem;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s, box-shadow 0.3s;
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+                }
+            }
+        }
+    }
+
+    .project-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .project-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.3s, background-color 0.3s;
+
+            &:hover {
+                transform: translateY(-3px);
+            }
+
+            &.live-demo {
+                background-color: #3498db;
+                color: white;
+
+                &:hover {
+                    background-color: #2980b9;
+                }
+            }
+
+            &.source-code {
+                background-color: #2c3e50;
+                color: white;
+
+                &:hover {
+                    background-color: #1a252f;
+                }
+            }
+        }
+    }
+}

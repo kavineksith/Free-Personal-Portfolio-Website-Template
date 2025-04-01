@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio - Project 001">
+    <link rel="icon" href="../../assests/meta/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assests/meta/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="../../assests/meta/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="../../assests/meta/apple-touch-icon.png">
+    <link rel="icon" href="../../assests/meta/android-chrome-192x192.png" sizes="192x192" type="image/png">
+    <link rel="icon" href="../../assests/meta/android-chrome-512x512.png" sizes="512x512" type="image/png">
+    <link rel="manifest" href="../../assests/meta/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../assests/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assests/css/navigation.css">
+    <link rel="stylesheet" type="text/css" href="../../assests/css/project-pages.css">
+    <link rel="stylesheet" type="text/css" href="../../assests/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../assests/css/footer.css">
+    <title>Personal Portfolio - Project 001</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="../../index.html"><img src="../../assests/images/page-logo.jpg" alt="logo"></a>
+                </div>
+                <div class="nav-bar">
+                    <ul>
+                        <li><a class="nav-url" href="../../index.html#welcome-section">Home</a></li>
+                        <li><a class="nav-url" href="../../index.html#myBio-section">About Me</a></li>
+                        <li><a class="nav-url" href="../../index.html#myQualifications-section">Qualifications</a></li>
+                        <li><a class="nav-url" href="../../index.html#mySkills-section">Skills</a></li>
+                        <li><a class="nav-url" href="../../index.html#myProjects-section">Projects</a></li>
+                        <li><a class="nav-url" href="../../index.html#contactMe-section">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section class="project-display">
+                <div class="project-container">
+                    <!-- Left Pane - Project Slideshow -->
+                    <div class="project-slideshow">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="../../assests/images/projects/project-001/undraw_programmer_raqr.svg" alt="Project Image 1">
+                            </div>
+                            <div class="slide fade">
+                                <img src="../../assests/images/projects/project-001/undraw_code-typing_laf4.svg" alt="Project Image 2">
+                            </div>
+                            <div class="slide fade">
+                                <img src="../../assests/images/projects/project-001/undraw_teamwork_8val.svg" alt="Project Image 3">
+                            </div>
+
+                            <!-- Navigation arrows -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+
+                        <!-- Dots/circles -->
+                        <div class="dots-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                    </div>
+
+                    <!-- Right Pane - Project Details -->
+                    <div class="project-details">
+                        <h1 class="project-title">Project 001 - E-Commerce Platform</h1>
+                        <div class="project-meta">
+                            <span class="project-date">Completed: March 2025</span>
+                            <span class="project-category">Category: Web Development</span>
+                        </div>
+
+                        <div class="project-description">
+                            <h2>Overview</h2>
+                            <p>This project is a fully responsive e-commerce platform built from scratch. It features
+                                user authentication, product catalog with filtering options, shopping cart
+                                functionality, secure checkout process, and an admin dashboard for inventory management.
+                            </p>
+
+                            <h2>Challenges & Solutions</h2>
+                            <p>The main challenge was implementing a real-time inventory system that could handle
+                                concurrent users. I solved this by implementing a queue-based reservation system with
+                                WebSockets to maintain data integrity.</p>
+
+                            <h2>Results</h2>
+                            <p>The platform increased client conversion rates by 28% and reduced cart abandonment by 15%
+                                in the first month after launch. The responsive design improved mobile engagement by
+                                42%.</p>
+                        </div>
+
+                        <div class="project-technologies">
+                            <h2>Technologies Used</h2>
+                            <div class="tech-tags">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3/SCSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">WebSockets</span>
+                            </div>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link live-demo">
+                                <i class="fas fa-desktop"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link source-code">
+                                <i class="fab fa-github"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; <span id="current-year"></span> Your Company Name. All rights reserved.</p>
+        </footer>
+    </div>
+    <script type="text/javascript" src="../../assests/js/design.js"></script>
+    <script type="text/javascript" src="../../assests/js/project.js"></script>
+    <script type="text/javascript" src="../../assests/js/redirections.js"></script>
+</body>
+
+</html>

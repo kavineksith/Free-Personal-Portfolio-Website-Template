@@ -1,0 +1,131 @@
+/* Style for the contact container */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  /* Space between left and right panes */
+  align-items: flex-start;
+  /* Align items to the top */
+  padding: 40px;
+  box-sizing: border-box;
+  /* Style for the left pane */
+  /* Style for the right pane */
+}
+.contact-container .left-pane {
+  width: 40%;
+  /* Left pane takes up 40% of the container width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.contact-container .left-pane img {
+  max-width: 100%;
+  /* Ensure image does not overflow */
+  height: auto;
+  /* Maintain aspect ratio */
+  border-radius: 8px;
+  /* Optional: for rounded corners on the image */
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.2));
+  /* More natural shadow */
+}
+.contact-container .right-pane {
+  width: 60%;
+  /* Right pane takes up 60% of the container width */
+  padding-left: 40px;
+  /* Space between left and right pane */
+}
+.contact-container .right-pane form {
+  display: flex;
+  flex-direction: column;
+  /* Stack the form elements vertically */
+  gap: 20px;
+  /* Space between form fields */
+  /* Style for form input containers */
+}
+.contact-container .right-pane form .error-message {
+  color: rgb(255, 0, 0);
+  font-size: 0.875rem;
+  margin-top: 5px;
+  padding: 2px 5px;
+}
+.contact-container .right-pane form .data-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack label and input vertically */
+  /* Style for the labels */
+  /* Style for the input fields */
+  /* Style for the textarea */
+  /* Style for the submit button */
+}
+.contact-container .right-pane form .data-container .input-labels {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+}
+.contact-container .right-pane form .data-container .input-fields {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.2));
+  /* More natural shadow */
+}
+.contact-container .right-pane form .data-container .input-fields:focus,
+.contact-container .right-pane form .data-container .input-fields:active,
+.contact-container .right-pane form .data-container .input-fields:hover {
+  /* Highlight input fields on focus */
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.2));
+  /* More natural shadow */
+  outline: #6610f2;
+  border: 1px solid #6610f2;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #6610f2;
+}
+.contact-container .right-pane form .data-container .input-textbox {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  /* Allow vertical resizing only */
+  transition: border-color 0.3s ease;
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.2));
+  /* More natural shadow */
+}
+.contact-container .right-pane form .data-container .input-textbox:focus,
+.contact-container .right-pane form .data-container .input-textbox:active,
+.contact-container .right-pane form .data-container .input-textbox:hover {
+  /* Highlight input textbox on focus */
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.2));
+  /* More natural shadow */
+  outline: #6610f2;
+  border: 1px solid #6610f2;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #6610f2;
+}
+.contact-container .right-pane form .data-container .submit-button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  background-color: #007BFF;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+  filter: drop-shadow(0px 0px 5px rgba(117, 118, 120, 0.5));
+  /* More natural shadow */
+}
+.contact-container .right-pane form .data-container .submit-button:focus,
+.contact-container .right-pane form .data-container .submit-button:active,
+.contact-container .right-pane form .data-container .submit-button:hover {
+  background-color: #08c52b;
+  outline: none;
+  border: none;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px #08c52b;
+}/*# sourceMappingURL=contact-form.css.map */

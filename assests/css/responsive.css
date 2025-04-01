@@ -1,0 +1,32 @@
+/* Media query to adjust the grid layout on smaller screens */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columns on small screens */
+  }
+}
+@media (max-width: 480px) {
+  .project-container {
+    grid-template-columns: 1fr;
+    /* 1 column on very small screens */
+  }
+}
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    /* Stack the left and right panes vertically on small screens */
+    align-items: center;
+  }
+  .left-pane,
+  .right-pane {
+    width: 100%;
+    /* Both panes take up full width */
+    padding: 20px 0;
+    /* Add some vertical padding */
+  }
+  .right-pane {
+    padding-left: 0;
+    /* Remove left padding when stacked vertically */
+  }
+}/*# sourceMappingURL=responsive.css.map */
