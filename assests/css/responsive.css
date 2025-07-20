@@ -1,0 +1,97 @@
+/* Media queries for responsive design */
+/* Tablet and small desktop */
+@media (max-width: 1024px) {
+  .project-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .qualificiations {
+    grid-template-columns: 1fr;
+  }
+  .skills-dashboard {
+    width: 90%;
+  }
+  .skills-dashboard .myskills ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills-dashboard .app-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  .project-container {
+    grid-template-columns: 1fr;
+  }
+  .bio-container {
+    flex-direction: column;
+  }
+  .bio-container .left-pane,
+  .bio-container .right-pane {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .bio-container .right-pane p {
+    max-width: 100%;
+    text-align: center;
+  }
+  .skills-dashboard {
+    width: 100%;
+  }
+  .skills-dashboard .myskills ul {
+    grid-template-columns: 1fr;
+  }
+  .skills-dashboard .app-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .contact-container .left-pane,
+  .contact-container .right-pane {
+    width: 100%;
+    padding: 0;
+  }
+  .contact-container .right-pane {
+    margin-top: 20px;
+  }
+}
+/* Mobile */
+@media (max-width: 480px) {
+  .app-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .long-button {
+    padding: 10px 30px;
+    font-size: 1rem;
+  }
+  .home-content {
+    padding: 30px 15px;
+  }
+  .home-content h2 {
+    font-size: 1.5rem;
+  }
+  .home-content p {
+    font-size: 0.9rem;
+  }
+  .content {
+    padding: 15px;
+  }
+  .content h2 {
+    font-size: 1.5rem;
+  }
+  .content p {
+    font-size: 0.9rem;
+  }
+}
+/* Small mobile */
+@media (max-width: 360px) {
+  .app-container img {
+    width: 50px;
+  }
+  .project-card {
+    max-width: 100%;
+  }
+}
