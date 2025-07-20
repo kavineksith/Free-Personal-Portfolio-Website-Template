@@ -1,0 +1,47 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+  background-color: rgb(234, 236, 238);
+  font-family: "Roboto", sans-serif;
+}
+@media (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+}
+
+.divider {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgb(74, 144, 226), transparent);
+}
+@media (max-width: 768px) {
+  .divider {
+    width: 90%;
+  }
+}
+
+.container {
+  background: linear-gradient(-45deg, rgb(255, 255, 255), rgb(224, 228, 232));
+  box-shadow: 5px 5px 15px rgb(193, 200, 211), -5px -5px 15px rgb(193, 200, 211);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
